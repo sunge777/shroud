@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+					<input type="button" value="按钮" onclick="btn1()" />
+					<input type="button" value="按钮" />
+					<input type="button" value="按钮" />
+					
+					<div style="width: 100px;height: 100px;background: red;"></div>	
+				
+				
+					<script src="new_file.js" type="text/javascript" charset="utf-8"></script>
+					
+					<script type="text/javascript">
+						function btn1(){
+							alert("我被点击了内部")
+						}
+						
+						
+					var inp = document.getElementsByTagName("input")[1];
+					inp.onclick = function(){
+						alert("我又被点击了外部")
+					}
+					</script>
+	</body>
+</html>
