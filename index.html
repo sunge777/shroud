@@ -31,7 +31,7 @@
 			.tupian{
 				width: 1903px;
 				height: 800px;
-				margin-top: -30px;
+				margin-top: -30px; 
 				margin-right: -100px;
 			}
 			.tupian1{
@@ -50,7 +50,6 @@
 				margin-top: -70px;
 				margin-left: 710px;
 				float: left;
-				
 			}
 			.shroud li{
 				float: left;
@@ -68,12 +67,10 @@
 			.swiper-container {
 		  		 	width: 1800px;
 		    		height: 700px;
-		    		margin-right: 50%;
-				}  
-			a {
-				color:aliceblue;
-			}	
-			
+			}
+			a{
+				color:aliceblue
+			}	  
 		</style>
 	</head>
 	<body>
@@ -82,8 +79,7 @@
 			<div style="width: 920px;margin:0 auto;">
 			<img class="logo"/>
 			<ul class="ulTag"></ul>			
-			
-			</div>
+		</div>
 			<div class="beijing">
 			<img class="tupian"/>	
 			<img class="tupian1"/>
@@ -105,36 +101,21 @@
 				</div>	
 			</ul>
 		</div>
-				  <!--// 轮播图效果-->
+				 	 <!--// 轮播图效果-->
 					<div class="swiper-container">
 						    <div class="swiper-wrapper">
 						        <div class="swiper-slide"><img src="img/CN6.jpg"/></div>
 						        <div class="swiper-slide"><img src="img/CN2.jpg"/></div>
 						        <div class="swiper-slide"><img src="img/CN4.jpg"/></div>
 						        <div class="swiper-slide"><img src="img/CN3.jpg"/></div>
-						        <div class="swiper-slide"><img src="img/CN7.jpg"/></div>
-						        
-						        <!--//药水哥-->
-						        <!--<div class="swiper-slide"><img src="img/20190514104220.gif"/></div>
-						        <div class="swiper-slide"><img src="img/20190514104220.gif"/></div>
-						        <div class="swiper-slide"><img src="img/20190514104220.gif"/></div>
-						        <div class="swiper-slide"><img src="img/20190514104220.gif"/></div>
-						        <div class="swiper-slide"><img src="img/20190514104220.gif"/></div>
-						        <div class="swiper-slide"><img src="img/20190514104220.gif"/></div>
-						        <div class="swiper-slide"><img src="img/20190514104220.gif"/></div>
-						        <div class="swiper-slide"><img src="img/20190514104220.gif"/></div>
-						        <div class="swiper-slide"><img src="img/20190514104220.gif"/></div>-->
-						        
-						        
-						    </div>
+						        <div class="swiper-slide"><img src="img/CN7.jpg"/></div>			        		        
+				  </div>
 						    
 						     <!--<div class="swiper-pagination"></div>-->
-						    
 						    <!-- 如果需要导航按钮 -->
 						    <div class="swiper-button-prev"></div>
 						    <div class="swiper-button-next"></div>    
-							</div>	
-				
+					</div>			
 	</body>
 	<script src="jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
@@ -151,6 +132,11 @@
 			$(".ulTag li a").eq(6).attr("href",data.bbb)
 			$(".ulTag li a").eq(0).attr("href",data.ccc)
 			$(".ulTag li a").eq(3).attr("href",data.aaa)
+			$(".ulTag li a").eq(1).attr("href",data.bbb)
+			$(".ulTag li a").eq(2).attr("href",data.ccc)
+			$(".ulTag li a").eq(4).attr("href",data.aaa)
+			$(".ulTag li a").eq(5).attr("href",data.aaa)
+			$(".ulTag li a").eq(7).attr("href",data.aaa)
 		})
 		
 			var mySwiper = new Swiper('.swiper-container', {
@@ -177,7 +163,6 @@
 							      disableOnInteraction: false,
 							      waitForTransition: false,
 							},
-		  }); 
+			});
 	</script>
 </html>
-
