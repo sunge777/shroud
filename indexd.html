@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		* {
+      		margin: 0;
+      		padding: 0;
+		    }
+
+			.ulTag{
+				height:90px;
+				margin: 0;
+				padding-top:30px;
+				float: right;
+				color: #E4E4E4;
+			}
+			.tupian10{
+				width: 1920px;
+				height: 875px;
+				margin-top: -30px;
+			}
+			.ulTag li{
+				list-style: none;
+				float: left;
+				padding: 20px;
+			}
+		  a{
+				color:aliceblue
+			}
+			.Van{
+				margin-top: -800px;
+				margin-left: 900px;
+			}	
+		</style>
+		
+	</head>
+	<body>
+		
+		<div style="height: 90px;width: 100%;background: #111111;">
+			<div style="width: 920px;margin:0 auto;">
+			<img class="logo"/>
+			<ul class="ulTag"></ul>			
+		</div>
+		<div>
+			<img src="img/CN30.jpg"/ class="tupian10">
+		<div class="Van">
+		<input type="text" name="" id="" value="" placeholder="用户名"/><br />
+		<input type="text" name="" id="" value="" placeholder="密码"/><br />
+		<a href="index.html"><input type="button" name="button" id="" value="登录" /></a>
+		</div>
+	
+		<script src="jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">	
+		var inputList = document.getElementsByTagName('input');
+		inputList[0].onblur = function  () {
+			if (inputList[0].value.length<7) {
+					alert('用户名长度至少6位')
+			}
+			for (var i = 0 ; i<inputList[0].value.length;i++) {
+				if (inputList[0].value.charCodeAt(i)>=65&&inputList[0].value.charCodeAt(i)<=90||inputList[0].value.charCodeAt(i)>=97&&inputList[0].value.charCodeAt(i)<=122||inputList[0].value.charCodeAt(i)>=48&&inputList[0].value.charCodeAt(i)<=57){
+					true;
+				} else {
+					alert('用户名只能为数字和字母')
+					return
+				}
+			}
+		}
+		inputList[1].onblur = function  () {
+			if (inputList[1].value.length<0) {
+					alert('密码长度至少8位')
+			}
+		}
+		inputList[2].onclick = function  () {
+			alert('用户名:'+inputList[0].value+'密码:'+inputList[1].value)
+		}
+		
+			$.get("new_file.json",function(data){
+			$(".logo").attr("src",data.logo)
+			$(".tupian30").attr("src",data.tupian30)
+			$.each(data.navTit,function(i,v){
+				$("<li></li>").html($("<a>").html(v)).appendTo($(".ulTag"))
+			})
+			$(".ulTag li a").eq(6).attr("href",data.bbb)
+			$(".ulTag li a").eq(0).attr("href",data.ccc)
+			$(".ulTag li a").eq(3).attr("href",data.aaa)
+			$(".ulTag li a").eq(4).attr("href",data.ddd)
+		})
+		</script>
+	</body>
+</html>
